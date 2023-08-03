@@ -4,8 +4,8 @@ from db import *
 import datetime
 
 @app.route('/')
-def home():
-    return render_template('home.html', tasks = sorted(todict(), key = lambda i:i['date']))
+def home(items=[]):
+    return render_template('home.html', tasks = sorted(items, key = lambda i:i['date']))
 
 @app.route('/add')
 def add():
@@ -31,3 +31,11 @@ def post_update():
 def delete():
     query(f"DELETE FROM tasks WHERE tid={request.args['tid']}")
     return redirect(url_for('home'))
+
+@app.route('/search')
+def search():
+    category=request.args["category"]
+    description=request.args["description"]
+    date=request.args["date"]
+    results=todict(f"SELECT * FROM tasks WHERE category LIKE '{category}' AND description LIKE '{description}%' AND date LIKE '{date}%'")
+    return home(results)
