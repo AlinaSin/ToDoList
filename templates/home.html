@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width={device-width}, initial-scale=1.0">
+    <title>To Do</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="tasks">
+        <div class="search and add">
+            <form action="/sa">
+                <input type="text" id="category-input" name="category" placeholder="Category">
+                <input type="text" id="description-input" name="description" placeholder="Description">
+                <input type="text" id="date-input" name="date" placeholder="Date">
+                <button type="submit" name="action" value="search">Search</button>
+                <button type="submit" name="action" value="add">Add</button>
+            </form>
+        </div>
+        {% for task in tasks %}
+        <div class="tasks">
+            <div hidden class="tid">{{ task['tid'] }}</div>
+            <div class="category">{{ task['category'] }}</div>
+            <div class="description">{{ task['description'] }}</div>
+            <div class="date">{{ task['date'] }}</div>
+            <div class="delete"><a href="/delete?tid={{ task['tid'] }}">Delete</a></div>
+            <div class="update"><a href="/update?tid={{ task['tid'] }}">Update</a></div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
