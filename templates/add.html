@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/static/style.css">
 
-<form action="/post_update">
+<form action="/postAdd">
     <label for="category">Category</label>
         <select name="category" id="category">
             <option value="home">home</option>
@@ -10,14 +10,13 @@
             <option value="important">important</option>
             <option value="other">other</option>
     </select>
-    <input type="text" name="tid" value="{{ task['tid'] }}" hidden>
     <label for="description">Description</label>
-    <input type="text" name="description" value="{{ task['description'] }}">
+    <input type="text" name="description">
     <label for="day">Day</label>
-    <input type="text" name="day" value="{{ task['date'][:2] }}">
+    <input type="text" name="day">
     <label for="month">Month</label>
-    <input type="text" name="month" value="{{ task['date'][3:5] }}">
+    <input type="text" name="month">
     <label for="year">Year</label>
-    <input type="text" name="year" value="{{ task['date'][6:] }}">
-    <input type="submit" value="Update">
+    <input type="text" name="year">
+    <input type="submit" value="Add">
 </form>

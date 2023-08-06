@@ -10,13 +10,15 @@
 
 <body>
     <div class="tasks">
-        <div class="search and add">
-            <form action="/sa">
+        <div class="search">
+            <form action="/search">
                 <input type="text" id="category-input" name="category" placeholder="Category">
                 <input type="text" id="description-input" name="description" placeholder="Description">
                 <input type="text" id="date-input" name="date" placeholder="Date">
-                <button type="submit" name="action" value="search">Search</button>
-                <button type="submit" name="action" value="add">Add</button>
+                <button type="submit" name="search" value="search">Search</button>
+            </form>
+            <form action="/add">
+                <input type="submit" value="Add Task">
             </form>
         </div>
         {% for task in tasks %}
