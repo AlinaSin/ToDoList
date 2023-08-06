@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="/static/style.css">
+
+<form action="/post_update">
+    <input type="text" name="tid" value="{{ task['tid'] }}" hidden>
+    <input type="text" name="category" value="{{ task['category'] }}">
+    <input type="text" name="description" value="{{ task['description'] }}">
+    <input type="text" name="date" value="{{ task['date'] }}">
+    <input type="submit" value="Update">
+</form>

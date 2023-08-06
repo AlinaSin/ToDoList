@@ -1,0 +1,18 @@
+.task{
+    display: flex;
+    gap: 2%;
+    border: 1px solid cornflowerblue;
+    border-radius: 10px;
+    padding: 10px;
+    width: 48%;
+}
+
+.category{
+    width: 20%;
+}
+.description{
+    width: 24%;
+}
+.date{
+    width: 20%;
+}

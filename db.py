@@ -1,12 +1,12 @@
 import sqlite3
 
-def setup(filename="todo.sqlite"):
+def setup(filename="tasks.sqlite"):
     with sqlite3.connect(filename) as conn:
         cur=conn.cursor()
-        cur.execute("CREATE TABLE IF NOT EXISTS tasks (tid INTEGER PRIMARY KEY, category TEXT, description TEXT, date TEXT")
+        cur.execute("CREATE TABLE IF NOT EXISTS tasks (tid INTEGER PRIMARY KEY, category TEXT, description TEXT, date TEXT)")
         conn.commit()
 
-def query(sql, filename="todo.sqlite"):
+def query(sql, filename="tasks.sqlite"):
     with sqlite3.connect(filename) as conn:
         cur=conn.cursor()
         cur.execute(sql)
@@ -21,10 +21,11 @@ def query(sql, filename="todo.sqlite"):
     
 def todict(sql="SELECT * FROM tasks"):
     tasks=query(sql)["rows"]
-    keys=["id","category","description","date"]
+    keys=["tid","category","description","date"]
     dicts=[]
     for task in tasks:
         values=list(task)
         dic=dict(zip(keys, values))
         dicts.append(dic)
     return dicts
+
