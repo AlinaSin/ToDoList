@@ -1,21 +1,139 @@
+header{
+    font-size: xx-large;
+    margin-left: 3%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
 .search{
-    display: flex;
+    display: inline;
+}
+.search button{
+    margin-left: 0.25%;
+    width: 10%;
+    background-color: #5a5a9f;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+}
+.search button:hover{
+    background-color:#8484c0;
+}
+.add button{
+    width: 15%;
+    align-self: center; 
+    margin-left: 13.3%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    background-color: #7132bd;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+}
+.add button:hover{
+    background-color: #a867f8;
 }
 .task{
     display: flex;
     gap: 2%;
-    border: 1px solid cornflowerblue;
+    border: 2px solid rgb(165, 165, 191);
     border-radius: 10px;
     padding: 10px;
-    width: 48%;
+    width: 51%;
 }
 
 .category{
-    width: 20%;
-}
-.description{
     width: 24%;
 }
+.description{
+    width: 26%;
+}
 .date{
-    width: 20%;
+    width: 22%;
+    margin-left: 4%;
+}
+.button-update {
+    display: inline-block;
+    padding: 10% 15%;
+    background-color: #a741e7;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+}
+.button-update:hover {
+    background-color: #c18fe7;
+}
+.button-delete {
+    display: inline-block;
+    padding: 10% 15%;
+    background-color: #1667b8;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10%;
+}
+
+.button-delete:hover {
+    background-color: #5886be;
+}
+.add-button {
+    display: inline-block;
+    padding: 0.5% 2%;
+    background-color:#5a5a9f;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color:#8484c0;
+}
+.inputz input{
+    margin-bottom: 2%;
+}
+.inputz{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+.inputz label{
+    padding-top: 3%;
+}
+.update-r input{
+    margin-bottom: 2%;
+}
+.update-r{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+.update-r label{
+    padding-top: 3%;
+}
+.update-button {
+    display: inline-block;
+    padding: 0.5% 2%;
+    background-color: #a741e7;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+.update-button:hover {
+    background-color: #c18fe7;
 }

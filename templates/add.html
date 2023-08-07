@@ -1,22 +1,24 @@
 <link rel="stylesheet" href="/static/style.css">
 
 <form action="/postAdd">
-    <label for="category">Category</label>
-        <select name="category" id="category">
-            <option value="home">home</option>
-            <option value="work">work</option>
-            <option value="hobbies">hobbies</option>
-            <option value="car">car</option>
-            <option value="important">important</option>
-            <option value="other">other</option>
-    </select>
-    <label for="description">Description</label>
-    <input type="text" name="description">
-    <label for="day">Day</label>
-    <input type="text" name="day">
-    <label for="month">Month</label>
-    <input type="text" name="month">
-    <label for="year">Year</label>
-    <input type="text" name="year">
-    <input type="submit" value="Add">
+    <div class="inputz">
+        <label for="category">Category:</label>
+            <select name="category" id="category">
+                <option value="home">home</option>
+                <option value="work">work</option>
+                <option value="hobbies">hobbies</option>
+                <option value="car">car</option>
+                <option value="important">important</option>
+                <option value="other">other</option>
+        </select>
+        <label for="description">Description:</label>
+        <input type="text" name="description">
+        <label for="day">Day:</label>
+        <input type="text" name="day">
+        <label for="month">Month:</label>
+        <input type="text" name="month">
+        <label for="year">Year:</label>
+        <input type="text" name="year">
+        <input type="submit" value="Add Task" class="add-button">
+    </div>
 </form>

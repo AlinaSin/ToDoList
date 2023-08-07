@@ -1,23 +1,25 @@
 <link rel="stylesheet" href="/static/style.css">
 
 <form action="/post_update">
-    <label for="category">Category</label>
-        <select name="category" id="category">
-            <option value="home">home</option>
-            <option value="work">work</option>
-            <option value="hobbies">hobbies</option>
-            <option value="car">car</option>
-            <option value="important">important</option>
-            <option value="other">other</option>
-    </select>
-    <input type="text" name="tid" value="{{ task['tid'] }}" hidden>
-    <label for="description">Description</label>
-    <input type="text" name="description" value="{{ task['description'] }}">
-    <label for="day">Day</label>
-    <input type="text" name="day" value="{{ task['date'][:2] }}">
-    <label for="month">Month</label>
-    <input type="text" name="month" value="{{ task['date'][3:5] }}">
-    <label for="year">Year</label>
-    <input type="text" name="year" value="{{ task['date'][6:] }}">
-    <input type="submit" value="Update">
+    <div class="update-r">
+        <label for="category">Category</label>
+            <select name="category" id="category">
+                <option value="home">home</option>
+                <option value="work">work</option>
+                <option value="hobbies">hobbies</option>
+                <option value="car">car</option>
+                <option value="important">important</option>
+                <option value="other">other</option>
+            </select>
+        <input type="text" name="tid" value="{{ task['tid'] }}" hidden>
+        <label for="description">Description</label>
+        <input type="text" name="description" value="{{ task['description'] }}">
+        <label for="day">Day</label>
+        <input type="text" name="day" value="{{ task['date'][:2] }}">
+        <label for="month">Month</label>
+        <input type="text" name="month" value="{{ task['date'][3:5] }}">
+        <label for="year">Year</label>
+        <input type="text" name="year" value="{{ task['date'][6:] }}">
+        <input type="submit" value="Update" class="update-button">
+    </div>
 </form>
